@@ -1,0 +1,193 @@
+body, h1, h3, p, ul, li, table, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+/* Setting default font family and size */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+}
+
+/* Styling header */
+header {
+    display: flex;
+    align-items: flex-end; /* Align items vertically to the top */
+    justify-content: center; /* Center items horizontally */
+    padding: 5px 20px; /* Adjust padding as needed */
+    background-color: white; /* Header background color */
+    text-align: center; 
+}
+
+.Logo_Image {
+    display: block; /* Ensures the image is treated as a block element */
+    margin: 0 auto; /* Centers the image horizontally */
+}
+
+.Line{
+    border: none; /* Removes the default border style */
+    border-top: 3px solid rgb(1, 1, 78); /* Adds a 1px solid black border on top */
+    margin: 0; /* Ensures no margin for the <hr> element */
+    width: 100%; /* Makes the line span the full width of the container */
+}
+header h1 {
+    font-size: 24px; /* Font size for the main heading */
+    margin-bottom: 10px; /* Add some space below the main heading */
+}
+
+header img {
+    margin: 0 10px; /* Add some space between the social media icons */
+}
+
+header ul {
+    list-style-type: none; /* Remove bullet points from the list */
+}
+
+header ul li {
+    display: inline; /* Display list items horizontally */
+    margin-right: 20px; /* Add some space between list items */
+}
+
+header ul li a {
+    color:red; /* Link color */
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* Styling main content */
+main {
+    padding: 20px;
+    color:white;
+    text-align: center; 
+    position: relative; /* Position relative for absolute positioning */
+}
+
+main::before {
+    content: "";
+    background-image: url('Other_Images/Home_BG.png'); /* Set background image for the main section */
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 1;
+    left: 0;
+    width: 100%; /* Set the width to cover half of the main section */
+    height: 20%;
+    z-index: -1; /* Ensure it stays behind other content */
+}
+
+.text-stroke {
+    color: white; /* Text color */
+    text-shadow: 
+        -2px -2px 0 black,
+         2px -2px 0 black,
+        -2px  2px 0 black,
+         2px  2px 0 black; /* Adjust shadow positions and color */
+}
+main p {
+    margin-bottom: 20px;
+}
+
+main h3 {
+    color: #fff; /* Set text color to white */
+    margin-bottom: 10px;
+    text-align:left;
+}
+
+/* Styling images within tables */
+table img {
+    display: block;
+    margin: 0 auto;
+}
+
+
+.image-container {
+    position: relative;
+    display: inline-block; /* Ensure the container only takes up the necessary space */
+}
+
+.image-container img {
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+
+.image-container:hover img {
+    transform: scale(1.1); /* Increase the scale factor for a larger hover effect */
+}
+.image-container:hover .text-overlay {
+    opacity: 1; /* Show text overlay on hover */
+}
+.text-overlay {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background color for better readability */
+    padding: 10px; /* Add padding for better appearance */
+  }
+  
+.text-overlay h2 {
+    margin: 0;
+  }
+
+.more-info {
+    display: none; /* Hide the additional information by default */
+}
+/* Styling footer */
+footer {
+    background-color: #333; /* Footer background color */
+    color: white; /* Text color */
+    padding: 50px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to the top */
+}
+
+.contact {
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+    align-items: flex-start; /* Align items to the left */
+}
+
+.phone-info,
+.email-info {
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+.phone-info img,
+.email-info img {
+    margin-right: 10px; /* Add space between logo and text */
+}
+
+.contact img {
+    margin-right: 10px; /* Add space between icons and text */
+}
+
+.site-map ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+    text-align: center; /* Center-align the list */
+}
+
+.site-map li {
+    display: block; /* Display list items horizontally */
+    margin: 0 10px; /* Add space between list items */
+}
+
+.newsletter {
+    text-align: right; /* Align text to the right */
+}
+
+#readMore {
+    background-color: #ffffff; /* Button background color */
+    color: rgb(0, 0, 0); /* Button text color */
+    border: none; /* Remove button border */
+    padding: 10px 20px; /* Add padding to the button */
+    cursor: pointer; /* Show pointer cursor on hover */
+    border-radius: 5px; /* Add border radius to create rounded corners */
+}
