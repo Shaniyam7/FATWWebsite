@@ -1,153 +1,407 @@
-body, h1, h3, p, ul, li, table, th, td {
+/* Global Styles */
+body {
+    /* Removes default margin and padding from the body */
     margin: 0;
     padding: 0;
-}
-
-/* Setting default font family and size */
-body {
+    /* Sets the default font family for the website */
     font-family: Arial, sans-serif;
-    font-size: 20px;
-}
-
-/* Styling header */
-header {
-    display: flex;
-    align-items: flex-end; /* Align items vertically to the top */
-    justify-content: center; /* Center items horizontally */
-    padding: 5px 20px; /* Adjust padding as needed */
-    background-color: white; /* Header background color */
-    text-align: center; 
-}
-
-.Logo_Image {
-    display: block; /* Ensures the image is treated as a block element */
-    margin: 0 auto; /* Centers the image horizontally */
-}
-
-.Line{
-    border: none; /* Removes the default border style */
-    border-top: 3px solid rgb(1, 1, 78); /* Adds a 1px solid black border on top */
-    margin: 0; /* Ensures no margin for the <hr> element */
-    width: 100%; /* Makes the line span the full width of the container */
-}
-header h1 {
-    font-size: 24px; /* Font size for the main heading */
-    margin-bottom: 10px; /* Add some space below the main heading */
-}
-
-header img {
-    margin: 0 10px; /* Add some space between the social media icons */
-}
-
-header ul {
-    list-style-type: none; /* Remove bullet points from the list */
-}
-
-header ul li {
-    display: inline; /* Display list items horizontally */
-    margin-right: 20px; /* Add some space between list items */
-}
-
-header ul li a {
-    color:red; /* Link color */
-    text-decoration: none; /* Remove underline from links */
-}
-
-/* Styling main content */
-main {
-    padding: 20px;
-    color:white;
-    text-align: center; 
-    position: relative; /* Position relative for absolute positioning */
-    
-}
-
-main tr td a {
-    color:red; /* Link color */
-    text-decoration: none;
-}
-main::before {
-    content: "";
-    background-image: url('Country_Images/Temple.jpg'); /* Set background image for the main section */
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    top: 1;
-    left: 0;
-    width: 100%; /* Set the width to cover half of the main section */
-    height: 20%;
-    z-index: -1; /* Ensure it stays behind other content */
-}
-.black-text {
-    color: black;
-}
-
-.text-stroke {
-    color: white; /* Text color */
-    text-shadow: 
-        -2px -2px 0 black,
-         2px -2px 0 black,
-        -2px  2px 0 black,
-         2px  2px 0 black; /* Adjust shadow positions and color */
-}
-main p {
-    margin-bottom: 20px;
-}
-
-main h3 {
-    color: rgb(1, 1, 78); /* Set text color to white */
-    margin-bottom: 10px;
-    text-align:left;
-
   }
-  .more-info {
-    display: none; /* Hide the additional information by default */
-}
-/* Styling footer */
-footer {
-    background-color: rgb(1, 1, 78); /* Footer background color */
-    color: white; /* Text color */
-    padding: 50px;
-}
-
-.footer-container {
+  
+  /* Styles for the site header, including social icons, logo, and navigation bar */
+  .site-header {
+    /* Use Flexbox to arrange elements in a row */
     display: flex;
+    /* Distribute space between elements evenly */
     justify-content: space-between;
-    align-items: flex-start; /* Align items to the top */
-}
-
-.contact {
+    /* Aligns items vertically at the same level */
+    align-items: center;
+    /* Adds padding around the header content */
+    padding: 10px 20px;
+    /* Background color for the header */
+    background-color: white;
+  }
+  
+  /* Styles for the social icons section within the header */
+  .social-icons {
+    /* Use Flexbox to arrange icons in a row */
     display: flex;
-    flex-direction: column; /* Arrange items vertically */
-    align-items: flex-start; /* Align items to the left */
-}
-
-.phone-info,
-.email-info {
+    /* Creates a gap between icons */
+    gap: 10px;
+  }
+  
+  /* Style for individual social media icons */
+  .social-icon {
+    /* Adjusts size of the social icons */
+    width: 47px;
+    height: 47px;
+  }
+  
+  /* Style for the site logo section within the header */
+  .site-logo {
+    /* Centers the logo */
+    text-align: center;
+  }
+  
+  .site-logo-image {
+    /* Smaller width and height to reduce logo size */
+    width: 175px; /* New width */
+    height: 100px; /* New height */
+    /* Center the logo horizontally */
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* Base styles for the navigation bar */
+  .nav-bar {
+    display: flex; /* Display navigation items in a row */
+    justify-content: space-around; /* Space them out evenly */
+    align-items: center; /* Align items at the same vertical level */
+    font-size: 1.5rem;
+  }
+  
+  /* Styling for the unordered list within the navigation bar */
+  .nav-bar ul {
+    list-style: none; /* Remove list styling */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Flexbox for horizontal arrangement */
+  }
+  
+  /* Styling for individual list items in the navigation bar */
+  .nav-bar ul li {
+    position: relative; /* Needed for positioning the pseudo-element */
+    padding: 10px; /* Add padding for spacing */
+  }
+  
+  /* Styling for the anchor links in the navigation bar */
+  .nav-bar ul li a {
+    text-decoration: none; /* Remove underline by default */
+    color: rgb(1, 1, 43); /* Default text color */
+    transition: color 0.3s; /* Smooth transition for color changes */
+  }
+  
+  /* Hover effect to add a bar under the navigation item */
+  .nav-bar ul li a:hover::after {
+    content: ''; /* Needed to create a pseudo-element */
+    position: absolute; /* Position it relative to its parent */
+    bottom: 0; /* Align the bar at the bottom */
+    left: 0; /* Start from the left edge */
+    right: 0; /* Extend to the right edge */
+    height: 3px; /* Set the height of the bar */
+    background-color: red; /* Color of the bar */
+    transition: width 0.3s; /* Smooth transition for the hover effect */
+  }
+  
+  /* Styling for the active navigation item */
+  .nav-bar ul li.active a {
+    color: red; /* Red text for the active page */
+  }
+  
+  /* Apply the active class to the current page */
+  .nav-bar ul li.active a::after {
+    content: ''; /* Create a bar under the active item */
+    position: absolute; /* Position it at the bottom */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: red; /* Same color as hover effect */
+  }
+  
+  
+  /* Styles for the horizontal line below the header */
+  .line {
+    /* Removes default border styling */
+    border: none;
+    /* Adds a solid top border */
+    border-top: 3px solid #333; /* Dark gray color */
+    /* Makes the line span the full width of the container */
+    width: 100%;
+  }
+  
+  /* Styles for the main content area */
+  .main-content {
+    /* Positions elements relative to the main content area */
+    position: relative;
+    /* Adds padding to create space around the content */
+    padding: 20px;
+    /* Centers the text */
+    text-align: center;
+    /* Sets text color to white */
+    color: rgb(26, 0, 78);
+    font-size: 1.5rem;
+  }
+  
+  .bg-image-section {
+    position: relative; /* Allow for absolute positioning within this section */
+    height: 300px; /* Set a fixed height for the background section */
+  }
+  
+  /* Apply the background image using a pseudo-element */
+  .bg-image-section::before {
+    content: ""; /* Required for pseudo-elements */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; /* Ensures the background covers the entire height */
+    background-image: url('Country_Images/Temple.jpg'); /* Background image */
+    background-size: cover; /* Ensure the image covers the section */
+    background-position: center; /* Center the background image */
+    opacity: 0.5; /* Add a semi-transparent overlay for readability */
+    z-index: -1; /* Ensure the background is behind the text */
+  }
+  
+  /* Styles for the text overlay on the background image */
+  .bg-image-section .text-overlay {
+    position: relative; /* Allows for positioning within the section */
+    padding: 39px;
+    text-align: center; /* Center-align the text */
+    color: white; /* Text color for contrast against the background */
+    font-size: 2rem;
+  }
+  
+  .read-more-button {
+    background-color:  #c00040; /* Red background for the button */
+    color: white; /* White text color for contrast */
+    padding: 15px 30px; /* Padding for a comfortable button size */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to indicate it's clickable */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  /* Hover effect for the Read More button */
+  .read-more-button:hover {
+    background-color: darkred; /* Darken the red on hover */
+  }
+  /* Styles for the text overlay on destination images */
+  .text-overlay {
+    /* Positions the text overlay absolutely within the card */
+    position: absolute;
+    /* Aligns the overlay at the bottom and center */
+    top: 0px; /* Place at the bottom of the card */
+    left: 50%;
+    /* Centers the text overlay horizontally */
+    transform: translateX(-50%); /* Ensure horizontal centering */
+    text-align: center;
+    /* Sets text color to white */
+    color: white;
+    /* Adds a semi-transparent background for readability */
+    background: rgba(0, 0, 0, 0.418);
+    /* Adds padding around the text */
+    padding:10;
+  }
+  /* Styles for the introduction section within the main content */
+  .intro-section {
+    /* Adds padding around the section */
+    padding: 20px;
+  }
+  
+  /* Background image for the introduction section */
+  .intro-section::before {
+    /* Sets a pseudo-element to create a background image */
+    content: '';
+    /* Sets the background image */
+    background-image: url('Other_Images/Home_BG.png');
+    /* Ensures the image covers the entire area */
+    background-size: cover;
+    /* Centers the background image */
+    background-position: center;
+    /* Adds a semi-transparent overlay for readability */
+    opacity: 1;
+    /* Positions the pseudo-element absolutely within the section */
+    position: absolute;
+    /* Aligns the pseudo-element to the entire section */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Ensures the pseudo-element stays behind the content */
+    z-index: -1;
+  }
+  
+  /* Styles for the text overlay on destination images */
+  .text-overlay {
+    /* Positions the text overlay absolutely within the card */
+    position: absolute;
+    /* Aligns the overlay at the bottom and center */
+    top: 0px; /* Place at the bottom of the card */
+    left: 50%;
+    /* Centers the text overlay horizontally */
+    transform: translateX(-50%); /* Ensure horizontal centering */
+    text-align: center;
+    /* Sets text color to white */
+    color: white;
+    /* Adds a semi-transparent background for readability */
+    background: rgba(0, 0, 0, 0.418);
+    /* Adds padding around the text */
+    padding:10;
+  }
+  
+  /* Styles for the heading within the text overlay */
+  .text-overlay h3 {
+    /* Adjusts font size for the heading */
+    font-size: 2.5rem;
+  }
+  
+  /* Styles for the paragraph within the text overlay */
+  .text-overlay p {
+    /* Adjusts font size for the paragraph */
+    font-size: 1.5rem;
+  }
+  
+  /* Container for the 4x3 grid */
+  .recipe-grid {
+    display: grid; /* Enable CSS Grid */
+    grid-template-columns: repeat(4, 1fr); /* Four equal columns */
+    gap: 20px; /* Space between grid items */
+    padding: 20px; /* Padding around the container */
+  }
+  
+  /* Base styling for the recipe cards */
+  .recipe-card {
+    position: relative; /* Allows for absolute positioning */
+    text-align: center; /* Center-align the content */
+    padding: 10px; /* Padding around the content */
+    background-color: #ffffff; /* Light background color */
+    border-radius: 10px; /* Rounded corners */
+    transition: opacity 0.3s, transform 0.3s; /* Smooth hover transitions */
+  }
+  
+  /* Hover effect to make the card semi-transparent */
+  .recipe-card:hover {
+    opacity: 1; /* Reduce opacity to create semi-transparent effect */
+    transform: scale(1.05); /* Scale up slightly on hover */
+  }
+  
+  /* Styling for the images within the recipe cards */
+  .recipe-image {
+    width: 100%; /* Image fills the card */
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+  }
+  
+  /* Styling for the text within the recipe cards */
+  .recipe-text {
+    color: #333; /* Text color */
+    margin-top: 10px; /* Margin above the text */
+  }
+  
+  /* Hidden button for the "Japchae" recipe */
+  .japchae-card .hover-button {
+    position: absolute; /* Positioning relative to the card */
+    bottom: 150px; /* Position at the bottom */
+    left: 50%; /* Horizontal centering */
+    transform: translateX(-50%); /* Keep centered */
+    color: rgb(255, 255, 255); /* White text */
+    border: 2px solid white; /* White outline */
+    text-decoration: none; /* No underline */
+    padding: 10px 20px; /* Padding for the button */
+    border-radius: 5px; /* Rounded corners */
+    background: rgba(0, 0, 0, 0.432); /* No background color */
+    opacity: 0; /* Invisible by default */
+    transition: opacity 0.3s; /* Smooth transition for appearing */
+    z-index: 1; /* Ensure the button appears above the image */
+  }
+  
+  /* Show the button when hovering over the "Japchae" recipe */
+  .japchae-card:hover .hover-button {
+    opacity: 1; /* Make the button visible on hover */
+    background: rgba(0, 0, 0, 0.7); /* Dark background on hover */
+  
+  }
+  /* Styles for the site footer */
+  .site-footer {
+    /* Background color for the footer */
+    background-color: #060144; /* Dark gray */
+    /* Text color for the footer */
+    color: white;
+    /* Adds padding to create space around the content */
+    padding: 50px;
+  }
+  
+  /* Styles for the footer content */
+  .footer-container {
+    display: grid; /* Use CSS Grid for layout */
+      grid-template-columns: 1fr 2fr; /* Left column is 1/3, right column is 2/3 */
+      color: white; /* Footer text color */
+      padding: 20px; /* Padding around the footer content */
+  }
+  
+  /* Styles for the contact information in the footer */
+  .contact-info {
+    background-color: #000746; /* Slightly different background for contrast */
+      padding: 20px; /* Padding around the content */
+      text-align: center; /* Align text to the left */
+    font-size: 1.5rem;
+  }
+  
+  /* Styles for the contact information details (phone and email) */
+  .phone-info,
+  .email-info {
+    /* Use Flexbox to align items vertically */
     display: flex;
-    align-items: center; /* Align items vertically */
-}
-
-.phone-info img,
-.email-info img {
-    margin-right: 10px; /* Add space between logo and text */
-}
-
-.contact img {
-    margin-right: 10px; /* Add space between icons and text */
-}
-
-.site-map ul {
-    list-style-type: none; /* Remove bullet points */
-    padding: 0;
-    text-align: center; /* Center-align the list */
-}
-
-.site-map li {
-    display: block; /* Display list items horizontally */
-    margin: 0 10px; /* Add space between list items */
-}
-
-.newsletter {
-    text-align: right; /* Align text to the right */
-}
+    align-items: center;
+  }
+  
+  /* Styles for the icons within contact information */
+  .contact-icon {
+    /* Adds space between the icon and the text */
+    margin-right: 10px;
+  }
+  
+  
+  /* Styling for the newsletter section in the footer */
+  .newsletter {
+    background-color: #ffffff; /* Lighter background color for contrast */
+    padding: 20px; /* Padding around the content */
+    text-align: center; /* Align text to the right */
+    border-radius: 10px; /* Optional rounded corners */
+    max-width: none; /* No maximum width limit */
+  }
+  
+  /* Specific styling for the "Newsletter" heading */
+  .newsletter h3 {
+    color: rgb(0, 0, 61); /* Change the "Newsletter" text color to blue */
+    font-size: 1.8rem;
+  }
+  
+  /* Form styling within the newsletter section */
+  .newsletter form {
+    display: flex; /* Flexbox for form layout */
+    flex-direction: column; /* Vertical stacking */
+    gap: 10px; /* Space between form elements */
+    align-items: center; /* Center elements horizontally */
+  }
+  
+  /* Styling for input fields */
+  .newsletter input {
+    width:500px;
+    padding: 10px; /* Padding inside the input fields */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    
+  }
+  
+  /* Styling for the button in the newsletter */
+  .newsletter button {
+    padding: 10px; /* Padding for the button */
+    background-color: #00054e; /* Primary blue color */
+    color: rgb(255, 255, 255); /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+  }
+  
+  /* Hover effect for the button */
+  .newsletter button:hover {
+    background-color: #0056b3; /* Darken the button on hover */
+  }
+  
+  /* Styling for error messages */
+  .error-text {
+    color: red; /* Error message color */
+  }
+  
