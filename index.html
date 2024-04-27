@@ -3,120 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Food Around The World</title>
     <link rel="stylesheet" href="Home.css">
     <script src="script.js"></script>
 </head>
 <body>
-    <header>
-        <img src="Logo_Images/Tiktok_Logo.png" alt="Tiktok" width="47" height="47" class="social">
-        <img src="Logo_Images/Twitter_Logo.png" alt="Twitter" width="47" height="47" class="social">
-        <img src="Logo_Images/Instagram_Logo.png" alt="Instagram" width="47" height="47" class="social">
-        <img src="Logo_Images/Youtube_Logo.png" alt="Youtube" width="47" height="47" class="social">
-        <img src="Logo_Images/Logo.png" alt="Logo" width="306" height="150" class="Logo_Image">
+<header class="site-header">
+    <div class="social-icons">
+        <a href="https://www.tiktok.com/" target="_blank"><img src="Logo_Images/Tiktok_Logo.png" alt="TikTok" class="social-icon"></a>
+        <a href="https://twitter.com/" target="_blank"><img src="Logo_Images/Twitter_Logo.png" alt="Twitter" class="social-icon"></a>
+        <a href="https://www.instagram.com/" target="_blank"><img src="Logo_Images/Instagram_Logo.png" alt="Instagram" class="social-icon"></a>
+        <a href="https://www.youtube.com/" target="_blank"><img src="Logo_Images/Youtube_Logo.png" alt="YouTube" class="social-icon"></a>
+    </div>
+    <div class="site-logo">
+        <img src="Logo_Images/Logo.png" alt="Site Logo" class="site-logo-image">
+    </div>
+    <nav class="nav-bar">
         <ul>
-            <li><a href="https://shaniyam7.github.io/FATWWebsite/index.html">Home</a></li>
-            <li>About</li>
-            <li>Contact</li>
+            <li class="active"><a href="https://shaniyam7.github.io/FATWWebsite/index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-    </header>
-    <hr class="Line">
-    <main>
-        <br><br><br><br><br>
-        <div class="text-stroke">
+    </nav>
+</header>
+
+<hr class="line">
+
+<main class="main-content">
+  <!-- Section with background image -->
+  <section class="bg-image-section">
+      <div class="text-overlay">
           <h1>Food Around The World</h1>
-          <br>
           <p>Embark on a flavorful journey with Food Around The World and discover a new world of diverse flavors, rich traditions, and fascinating history!</p>
           <button id="readMore">Read More</button>
           <div id="moreInfo" style="display: none;">
-              <p style="color:rgba(255, 255, 255, 0.589)">This is additional information that will be displayed when you click "Read More".</p>
+              <p>This is additional information that will be displayed when you click "Read More".</p>
           </div>
-        </div>
-        <br><br>
-        <h3 style="color:rgb(1, 1, 78)">PICK YOUR DESTINATION...</h3>
-        <br>
-        <table>
-            <tr>
-                <th>
-                  <div class="image-container">
-                    <a href="https://shaniyam7.github.io/FATWWebsite/South_Korea.html">
-                        <img src="Country_Images/Korea.png" alt="South Korea" width="524" height="674">
-                        <div class="text-overlay">
-                            <h2>South Korea</h2>
-                        </div>
-                    </a>
-                </div>
-                </th>
-                <th>
-                  <div class="image-container">
-                    <img src="Country_Images/Japan.png" alt="Japan" width="524" height="674">
-                    <div class="text-overlay">
-                      <h2>Japan</h2>
-                    </div>
-                  </div>
-                </th>
-                <th>
-                  <div class="image-container">
-                    <img src="Country_Images/Mexico.png" alt="Mexico" width="524" height="674">
-                    <div class="text-overlay">
-                      <h2>Mexico</h2>
-                    </div>
-                  </div>
-                </th>
-              </tr>
-            <img src="Logo_Images/Logo.png" alt="Logo" width="170" height="100" style="float:right">
-        </table>
-        <br>
-        <h3 style="color:rgb(1, 1, 78)">RECENT RECIPES</h3>
-        <br>
-        <table>
-            <tr>
-                <th><img src="Food_Images/Kimbap.jpg" alt="Kimbap" width="218" height="218"></th>
-                <th><img src="Food_Images/Takoyaki.jpg" alt="Takoyaki" width="218" height="218"></th>
-                <th><img src="Food_Images/Chicken_Enchiladas.jpg" alt="Chicken Enchiladas" width="218" height="218"></th>
-            </tr>
-            <tr>
-                <td>김밥 (Seaweed Rice Rolls)</td>
-                <td>たこ焼き (Octopus Balls)</td>
-                <td>Enchiladas de Pollo (Chicken enchiladas)</td>
-            </tr>
-        </table>
-        
-    </main>
+      </div>
+  </section>
 
-    <footer>
-        <div class="footer-container">
-            <div class="contact">
-                <h3>Contact Me</h3>
-                <br>
-                <div class="phone-info">
-                    <img src="Logo_Images/Phone_Logo.png" alt="Phone" width="47" height="47">
-                    <p>+1(843)-618-2555</p>
-                </div>
-                <div class="email-info">
-                    <img src="Logo_Images/Mail_Logo.png" alt="Mail" width="47" height="47">
-                    <p>shaniyam74@icloud.com</p>
-                </div>
-            </div>
-            <div class="site-map">
-                <h3>Site Map</h3>
-                <br>
-                <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Contact</li>
-                </ul>
-            </div>
-            <div class="newsletter">
-              <h3>Newsletter</h3>
-              <br>
-              <p>Email</p>
-              <input type="email" placeholder="Enter your email" required>
-              <button>Join</button>
-              <p class="error-text" style="display: none; color: red;"></p> <!-- Error message -->
+    <section class="destination-section">
+        <h2>Pick Your Destination...</h2>
+        <div class="destination-grid">
+            <div class="destination-card">
+              <img src="Country_Images/Korea.png" alt="South Korea" class="destination-image">
+              <div class="text-overlay">
+                  <h2>South Korea</h2>
+                  <p>Explore the flavors of South Korea.</p>
+                  <!-- "See Recipes" button linking to the relevant website -->
+                  <a href="https://shaniyam7.github.io/FATWWebsite/South_Korea.html" class="see-recipes-button">
+                      See Recipes
+                  </a>
+              </div>
           </div>
+            <div class="destination-card">
+                <img src="Country_Images/Japan.png" alt="Japan" class="destination-image">
+                <div class="text-overlay">
+                    <h3>Japan</h3>
+                </div>
+            </div>
+            <div class="destination-card">
+                <img src="Country_Images/Mexico.png" alt="Mexico" class="destination-image">
+                <div class="text-overlay">
+                    <h3>Mexico</h3>
+                </div>
+            </div>
         </div>
-    </footer>
-<script src="script.js"></script>  
+    </section>
+
+    <section class="recipes-section">
+        <h2>Recent Recipes</h2>
+        <div class="recipe-container">
+          <!-- Left one-third -->
+          <div class="recipe-section">
+              <img src="Food_Images/Kimbap.jpg" alt="Kimbap" class="recipe-image">
+              <h3>Kimbap : 김밥</h3>
+              <p>Seaweed Rice Rolls</p>
+          </div>
+      
+          <!-- Center one-third -->
+          <div class="recipe-section">
+            <img src="Food_Images/Takoyaki.jpg" alt="Takoyaki" class="recipe-image">
+              <h3>Takoyaki : たこ焼き</h3>
+              <p>Spicy Rice Cakes</p>
+          </div>
+      
+          <!-- Right one-third -->
+          <div class="recipe-section">
+              <img src="Food_Images/Chicken_Enchiladas.jpg" alt="Chicken Enchiladas" class="recipe-image">
+              <h3>Enchiladas de Pollo</h3>
+              <p>Chicken Enchiladas</p>
+          </div>
+      </div>
+    </section>
+</main>
+
+<footer>
+  <div class="footer-container">
+      <!-- Contact info takes the left half -->
+      <div class="contact-info">
+          <h3>Contact Me</h3>
+          <div class="phone-info">
+              <img src="Logo_Images/Phone_Logo.png" alt="Phone" class="contact-icon">
+              <p>+1 (843) 618-2555</p>
+          </div>
+          <div class="email-info">
+              <img src="Logo_Images/Mail_Logo.png" alt="Mail" class="contact-icon">
+              <p>shaniyam74@icloud.com</p>
+          </div>
+      </div>
+
+      <!-- Newsletter takes the right half -->
+      <div class="newsletter">
+          <h3>Newsletter</h3>
+          <form id="newsletter-form">
+              <input type="text" placeholder="First Name" required>
+              <input type="text" placeholder="Last Name" required>
+              <input type="email" placeholder="Email" required>
+              <button type="submit">Join</button>
+          </form>
+          <p class="error-text" style="display: none;">Please enter a valid email address.</p>
+      </div>
+  </div>
+</footer>
 </body>
 </html>
