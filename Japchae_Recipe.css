@@ -155,7 +155,7 @@ body {
   /* Styles for the text overlay on the background image */
   .bg-image-section .text-overlay {
     position: relative; /* Allows for positioning within the section */
-    padding: 33px;
+    padding: 30px;
     text-align: center; /* Center-align the text */
     color: white; /* Text color for contrast against the background */
     font-size: 2rem;
