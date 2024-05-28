@@ -193,7 +193,7 @@ body {
   /* Styling for the Read More button */
   .read-more-button {
     background-color:  #c00040; /* Red background for the button */
-    color: white; /* White text color for contrast */
+    color: red; /* White text color for contrast */
     padding: 15px 30px; /* Padding for a comfortable button size */
     border: none; /* Remove border */
     border-radius: 5px; /* Rounded corners */
