@@ -205,6 +205,9 @@ body {
   .read-more-button:hover {
     background-color: darkred; /* Darken the red on hover */
   }
+.moreinfo{
+    display:none;
+}
   /* Styles for the text overlay on destination images */
   .text-overlay {
     /* Positions the text overlay absolutely within the card */
